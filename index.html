@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soluciones solares residenciales, comerciales y de respaldo en Nicaragua." />
+    <title>DC Power Nicaragua | Energía solar inteligente</title>
+    <link rel="icon" href="assets/dc_power_favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="DC Power Nicaragua, inicio">
+          <span class="brand-mark"><img src="assets/dc_power_favicon.png" alt="" /></span>
+          <span class="brand-name">DC Power <small>Nicaragua</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          <a class="active" href="index.html" data-i18n="nav_inicio">Inicio</a>
+          <a href="nosotros.html" data-i18n="nav_nosotros">Nosotros</a>
+          <a href="servicios.html" data-i18n="nav_servicios">Servicios</a>
+          <a href="contacto.html" data-i18n="nav_contacto">Contacto</a>
+        </nav>
+        <div class="header-actions">
+          <label class="language-control">
+            <span class="sr-only">Idioma</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21c-2.3-2.5-3.5-5.5-3.5-9S9.7 5.5 12 3Z"/></svg>
+            <select id="lang-switch" aria-label="Seleccionar idioma">
+              <option value="es">ES</option>
+              <option value="en">EN</option>
+            </select>
+          </label>
+          <a class="header-cta" href="contacto.html" data-i18n="nav_quote">Cotizar proyecto</a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil">
+        <a class="active" href="index.html" data-i18n="nav_inicio">Inicio</a>
+        <a href="nosotros.html" data-i18n="nav_nosotros">Nosotros</a>
+        <a href="servicios.html" data-i18n="nav_servicios">Servicios</a>
+        <a href="contacto.html" data-i18n="nav_contacto">Contacto</a>
+        <a class="button button-primary" href="contacto.html" data-i18n="nav_quote">Cotizar proyecto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow"><span></span><span data-i18n="hero_eyebrow">Energía inteligente para Nicaragua</span></div>
+            <h1 data-i18n="hero_title">Tu energía.<br /><em>Tu independencia.</em></h1>
+            <p data-i18n="hero_subtitle">Diseñamos sistemas solares eficientes que reducen tus costos y mantienen lo importante siempre encendido.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="contacto.html">
+                <span data-i18n="hero_btn">Evaluar mi proyecto</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12h14m-5-5 5 5-5 5"/></svg>
+              </a>
+              <a class="text-link" href="servicios.html"><span data-i18n="hero_secondary">Conocer soluciones</span><span>↗</span></a>
+            </div>
+            <div class="trust-row">
+              <div class="avatars single" aria-hidden="true"><span>1:1</span></div>
+              <p><strong data-i18n="trust_title">Asesoría personalizada</strong><br /><span data-i18n="trust_text">para hogares y empresas</span></p>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="hero-photo" role="img" aria-label="Paneles solares instalados en un techo con paisaje verde"></div>
+            <div class="floating-card savings-card">
+              <span class="metric-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3"/></svg></span>
+              <div><small data-i18n="saving_label">Ahorro potencial</small><strong>30–100%</strong><span data-i18n="saving_detail">en tu factura eléctrica</span></div>
+            </div>
+            <div class="floating-card clean-card">
+              <span class="status-dot"></span>
+              <span data-i18n="clean_energy">Energía limpia activa</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-foot container">
+          <span data-i18n="scroll_label">Descubre cómo funciona</span><span class="scroll-line"></span>
+        </div>
+      </section>
+
+      <section class="stats-band" aria-label="Beneficios principales">
+        <div class="container stats-grid">
+          <div><strong>1:1</strong><span data-i18n="stat_projects">acompañamiento personalizado</span></div>
+          <div><strong>3</strong><span data-i18n="stat_sectors">sectores de solución</span></div>
+          <div><strong>24/7</strong><span data-i18n="stat_energy">energía con respaldo</span></div>
+          <div><strong>100%</strong><span data-i18n="stat_custom">diseño a tu medida</span></div>
+        </div>
+      </section>
+
+      <section class="section solutions">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div><span class="section-kicker" data-i18n="solutions_kicker">Nuestras soluciones</span><h2 data-i18n="solutions_title">Energía diseñada para<br />cada necesidad.</h2></div>
+            <p data-i18n="solutions_intro">Tecnología confiable, instalación profesional y acompañamiento en cada etapa de tu transición energética.</p>
+          </div>
+          <div class="solution-grid">
+            <article class="solution-card featured reveal">
+              <div class="card-number">01</div>
+              <span class="solution-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7v9H3v-9Z"/><path d="M8 20v-6h8v6"/></svg></span>
+              <div><h3 data-i18n="service_1_title">Energía residencial</h3><p data-i18n="service_1_desc">Convierte el sol en ahorro y tranquilidad para tu hogar.</p></div>
+              <a href="servicios.html" aria-label="Ver solución residencial"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12h14m-5-5 5 5-5 5"/></svg></a>
+            </article>
+            <article class="solution-card reveal">
+              <div class="card-number">02</div>
+              <span class="solution-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 21V8l8-5v18M12 9h8v12M8 9v1m0 4v1m0 4v1m8-7v1m0 4v1"/></svg></span>
+              <div><h3 data-i18n="service_2_title">Comercial e industrial</h3><p data-i18n="service_2_desc">Reduce costos operativos y mejora la competitividad de tu negocio.</p></div>
+              <a href="servicios.html" aria-label="Ver solución comercial"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12h14m-5-5 5 5-5 5"/></svg></a>
+            </article>
+            <article class="solution-card reveal">
+              <div class="card-number">03</div>
+              <span class="solution-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="6" width="17" height="12" rx="2"/><path d="M20 10h2v4h-2M8 10v4m-2-2h4"/></svg></span>
+              <div><h3 data-i18n="service_3_title">Respaldo y sistemas DC</h3><p data-i18n="service_3_desc">Continuidad y protección para tus equipos esenciales.</p></div>
+              <a href="servicios.html" aria-label="Ver sistemas de respaldo"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12h14m-5-5 5 5-5 5"/></svg></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process">
+        <div class="container process-grid">
+          <div class="process-copy reveal">
+            <span class="section-kicker" data-i18n="process_kicker">Simple y transparente</span>
+            <h2 data-i18n="process_title">Del primer mensaje a tu propia energía.</h2>
+            <p data-i18n="process_intro">Te acompañamos con claridad para que tomes una decisión segura, rentable y sin complicaciones.</p>
+            <a class="text-link dark" href="nosotros.html"><span data-i18n="about_link">Conoce nuestro enfoque</span><span>↗</span></a>
+          </div>
+          <ol class="steps">
+            <li class="reveal"><span>01</span><div><h3 data-i18n="step_1_title">Conversamos</h3><p data-i18n="step_1_text">Conocemos tu consumo, prioridades y objetivos.</p></div></li>
+            <li class="reveal"><span>02</span><div><h3 data-i18n="step_2_title">Diseñamos</h3><p data-i18n="step_2_text">Creamos una solución eficiente y dimensionada para ti.</p></div></li>
+            <li class="reveal"><span>03</span><div><h3 data-i18n="step_3_title">Energizamos</h3><p data-i18n="step_3_text">Instalamos, verificamos y te acompañamos.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section cta-section">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <div><span class="section-kicker light" data-i18n="cta_kicker">El futuro empieza hoy</span><h2 data-i18n="cta_title">¿Listo para producir<br />tu propia energía?</h2></div>
+            <div><p data-i18n="cta_text">Cuéntanos sobre tu proyecto. La primera orientación es sin compromiso.</p><a class="button button-light" href="https://wa.me/50557767700?text=Hola,%20me%20gustaría%20evaluar%20un%20proyecto%20de%20energía%20solar." target="_blank" rel="noopener"><span data-i18n="cta_button">Hablar por WhatsApp</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12h14m-5-5 5 5-5 5"/></svg></a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand"><img src="assets/dc_power_nicaragua_logo.svg" alt="DC Power Nicaragua" /><p data-i18n="footer_tagline">Energía limpia, confiable y diseñada para avanzar.</p></div>
+        <div><h3 data-i18n="footer_explore">Explora</h3><a href="nosotros.html" data-i18n="nav_nosotros">Nosotros</a><a href="servicios.html" data-i18n="nav_servicios">Servicios</a><a href="contacto.html" data-i18n="nav_contacto">Contacto</a></div>
+        <div><h3 data-i18n="footer_contact">Contacto</h3><a href="tel:+50557767700">+505 5776-7700</a><a href="mailto:dcpowernicaragua@gmail.com">dcpowernicaragua@gmail.com</a><span>Managua, Nicaragua</span></div>
+      </div>
+      <div class="container footer-bottom"><span data-i18n="footer_copy">© 2026 DC Power Nicaragua. Todos los derechos reservados.</span><a href="https://unsplash.com/@as95" target="_blank" rel="noopener">Foto: Aron Schmitz / Unsplash</a></div>
+    </footer>
+  </body>
+</html>
