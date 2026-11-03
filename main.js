@@ -232,3 +232,4 @@ document.addEventListener("DOMContentLoaded", () => {
   )
   reveals.forEach((element) => observer.observe(element))
 })
+

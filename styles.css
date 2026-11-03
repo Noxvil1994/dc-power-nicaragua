@@ -16,8 +16,8 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { background: var(--cream); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.6; overflow-x: hidden; }
+html { scroll-behavior: smooth; max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+body { max-width: 100%; background: var(--cream); color: var(--ink); font-family: "DM Sans", sans-serif; line-height: 1.6; overflow-x: hidden; overflow-x: clip; }
 body.menu-open { overflow: hidden; }
 img { display: block; max-width: 100%; }
 a { color: inherit; text-decoration: none; }
@@ -184,8 +184,8 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
 @media (max-width: 960px) {
   .desktop-nav, .header-cta { display: none; }
   .menu-toggle { display: grid; }
-  .mobile-nav { position: fixed; inset: 84px 0 auto; height: calc(100vh - 84px); background: var(--cream); padding: 40px 24px; flex-direction: column; gap: 5px; transform: translateX(100%); transition: .3s; display: flex; }
-  .mobile-nav.open { transform: none; }
+  .mobile-nav { position: absolute; inset: 100% 0 auto; width: 100%; height: calc(100vh - 84px); height: calc(100dvh - 84px); background: var(--cream); padding: 40px 24px; flex-direction: column; gap: 5px; display: flex; overflow-y: auto; overscroll-behavior: contain; opacity: 0; visibility: hidden; pointer-events: none; clip-path: inset(0 0 0 100%); transition: clip-path .3s ease, opacity .2s ease, visibility 0s linear .3s; }
+  .mobile-nav.open { opacity: 1; visibility: visible; pointer-events: auto; clip-path: inset(0); transition-delay: 0s; }
   .mobile-nav > a:not(.button) { font: 700 2rem "Manrope", sans-serif; padding: 10px 0; }
   .mobile-nav .button { margin-top: 25px; color: var(--white); }
   .hero { padding-top: 60px; }
@@ -215,7 +215,7 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
   .brand-mark img { width: 31px; height: 31px; }
   .brand-name { font-size: .78rem; }
   .brand-name small { font-size: .5rem; }
-  .mobile-nav { inset: 72px 0 auto; height: calc(100vh - 72px); }
+  .mobile-nav { height: calc(100vh - 72px); height: calc(100dvh - 72px); }
   .language-control { height: 38px; }
   .hero { padding-top: 38px; }
   .hero h1 { font-size: clamp(2.7rem, 14vw, 4rem); }
