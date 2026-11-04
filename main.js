@@ -95,6 +95,9 @@ const translations = {
       "Del techo al tablero: cada sistema se instala con orden, seguridad y criterio técnico.",
     work_cap_1: "Sistema fotovoltaico en techo",
     work_cap_2: "Inversor, protecciones y almacenamiento",
+        social_title: "Conectemos",
+    social_text:
+      "Síguenos para conocer nuestros proyectos y novedades de energía solar.",
   },
 
   en: {
@@ -193,6 +196,9 @@ const translations = {
       "From the roof to the panel: every system is installed with order, safety, and technical care.",
     work_cap_1: "Rooftop photovoltaic system",
     work_cap_2: "Inverter, protections, and storage",
+        social_title: "Let's connect",
+    social_text:
+      "Follow us to see our projects and solar energy news.",
   },
 }
     
