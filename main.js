@@ -89,7 +89,14 @@ const translations = {
     location: "Ubicación",
     phone: "WhatsApp",
     email: "Correo",
+          work_kicker: "Nuestro trabajo",
+    work_title: "Instalaciones reales, resultados reales.",
+    work_intro:
+      "Del techo al tablero: cada sistema se instala con orden, seguridad y criterio técnico.",
+    work_cap_1: "Sistema fotovoltaico en techo",
+    work_cap_2: "Inversor, protecciones y almacenamiento",
   },
+
   en: {
     nav_inicio: "Home",
     nav_nosotros: "About",
@@ -180,9 +187,15 @@ const translations = {
     location: "Location",
     phone: "WhatsApp",
     email: "Email",
+        work_kicker: "Our work",
+    work_title: "Real installations, real results.",
+    work_intro:
+      "From the roof to the panel: every system is installed with order, safety, and technical care.",
+    work_cap_1: "Rooftop photovoltaic system",
+    work_cap_2: "Inverter, protections, and storage",
   },
 }
-
+    
 function changeLanguage(lang) {
   document.documentElement.lang = lang
   document.querySelectorAll("[data-i18n]").forEach((element) => {
