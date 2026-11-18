@@ -624,6 +624,22 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
     radial-gradient(50% 60% at 95% 0%, rgba(8,127,232,.22), transparent 70%),
     linear-gradient(160deg, #030b20 0%, var(--night) 55%, var(--ink) 100%);
 }
-.hero-photo.hero-photo-art { background: #040c22; box-shadow: 0 0 0 1px rgba(85,217,21,.28), 0 30px 80px rgba(0,0,0,.5), 0 0 90px rgba(85,217,21,.16); }
+.hero-photo.hero-photo-art { background: #8fd0ff; box-shadow: 0 0 0 1px rgba(255,255,255,.35), 0 30px 80px rgba(0,0,0,.45), 0 0 110px rgba(143,208,255,.35); }
 .hero-visual::before { border-color: rgba(85,217,21,.3); }
 .hero .floating-card { background: rgba(4,12,34,.72); }
+
+/* Escena de día en la portada */
+.hero-art .hd-ring { transform-origin: 420px 118px; animation: ha-spin 30s linear infinite; }
+.hero-art .hd-sun { transform-origin: 420px 118px; animation: ha-pulse 3.6s ease-in-out infinite; }
+.hero-art .hd-cloud { animation: hd-drift 14s ease-in-out infinite alternate; }
+.hero-art .hd-cloud-2 { animation-duration: 18s; animation-direction: alternate-reverse; }
+@keyframes hd-drift { to { transform: translateX(26px); } }
+.hero-art .hd-rays { animation: ha-dash 1.8s linear infinite; }
+.hero-art .hd-flow { animation: ha-dash-2 1s linear infinite; }
+.hero-art .hd-glint { animation: hd-glint 5s cubic-bezier(.4,0,.2,1) infinite; }
+@keyframes hd-glint { 0% { transform: translateX(0); } 55%, 100% { transform: translateX(300px); } }
+.hero-art .hd-bar { animation: ha-bar 2.4s ease-in-out infinite; }
+.hero-art .hd-window rect { animation: hd-light 3s ease-in-out infinite; }
+@keyframes hd-light { 50% { fill: #d4f7c4; } }
+.hero .clean-card { top: 40%; }
+@media (max-width: 600px) { .hero .clean-card { top: 29%; } }
