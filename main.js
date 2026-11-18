@@ -6,7 +6,7 @@ const translations = {
     nav_contacto: "Contacto",
     nav_quote: "Cotizar proyecto",
     hero_eyebrow: "Energía inteligente para Nicaragua",
-    hero_title: "Tu energía. Tu independencia.",
+    hero_title: "Tu energía.<br /><em>Tu independencia.</em>",
     hero_subtitle:
       "Diseñamos sistemas solares eficientes que reducen tus costos y mantienen lo importante siempre encendido.",
     hero_btn: "Evaluar mi proyecto",
@@ -22,7 +22,7 @@ const translations = {
     stat_energy: "energía con respaldo",
     stat_custom: "diseño a tu medida",
     solutions_kicker: "Nuestras soluciones",
-    solutions_title: "Energía diseñada para cada necesidad.",
+    solutions_title: "Energía diseñada para<br />cada necesidad.",
     solutions_intro:
       "Tecnología confiable, instalación profesional y acompañamiento en cada etapa de tu transición energética.",
     service_1_title: "Energía residencial",
@@ -45,6 +45,17 @@ const translations = {
     step_3_text: "Instalamos, verificamos y te acompañamos.",
     cta_kicker: "El futuro empieza hoy",
     cta_title: "¿Listo para producir tu propia energía?",
+    cta_title_html: "¿Listo para producir<br />tu propia energía?",
+    mv_kicker: "Hacia dónde vamos",
+    mv_title: "Nuestra misión y visión.",
+    mv_intro:
+      "Lo que hacemos cada día y el futuro que queremos construir para Nicaragua.",
+    mission_title: "Misión",
+    mission_text:
+      "Llevar energía solar confiable a hogares y empresas de Nicaragua, con sistemas bien diseñados, instalación profesional y un acompañamiento cercano que haga la transición simple y rentable.",
+    vision_title: "Visión",
+    vision_text:
+      "Ser la empresa de referencia en energía solar y almacenamiento en Nicaragua, reconocida por la calidad de su trabajo y por ayudar a más familias y negocios a alcanzar su independencia energética.",
     cta_text:
       "Cuéntanos sobre tu proyecto. La primera orientación es sin compromiso.",
     cta_button: "Hablar por WhatsApp",
@@ -129,7 +140,7 @@ const translations = {
     nav_contacto: "Contact",
     nav_quote: "Get a quote",
     hero_eyebrow: "Smart energy for Nicaragua",
-    hero_title: "Your energy. Your independence.",
+    hero_title: "Your energy.<br /><em>Your independence.</em>",
     hero_subtitle:
       "We design efficient solar systems that lower your costs and keep what matters always powered.",
     hero_btn: "Evaluate my project",
@@ -145,7 +156,7 @@ const translations = {
     stat_energy: "backup energy",
     stat_custom: "custom designed",
     solutions_kicker: "Our solutions",
-    solutions_title: "Energy designed for every need.",
+    solutions_title: "Energy designed for<br />every need.",
     solutions_intro:
       "Reliable technology, professional installation, and support at every step of your energy transition.",
     service_1_title: "Residential energy",
@@ -169,6 +180,16 @@ const translations = {
     step_3_text: "We install, verify, and stay by your side.",
     cta_kicker: "The future starts today",
     cta_title: "Ready to produce your own energy?",
+    cta_title_html: "Ready to produce<br />your own energy?",
+    mv_kicker: "Where we're headed",
+    mv_title: "Our mission and vision.",
+    mv_intro: "What we do every day and the future we want to build for Nicaragua.",
+    mission_title: "Mission",
+    mission_text:
+      "To bring reliable solar energy to homes and businesses across Nicaragua, with well-designed systems, professional installation, and close support that makes the transition simple and profitable.",
+    vision_title: "Vision",
+    vision_text:
+      "To be Nicaragua's reference company in solar energy and storage, recognized for the quality of our work and for helping more families and businesses achieve energy independence.",
     cta_text: "Tell us about your project. Your first consultation is free.",
     cta_button: "Chat on WhatsApp",
     footer_tagline: "Clean, reliable energy designed to move forward.",
@@ -252,6 +273,10 @@ function changeLanguage(lang) {
     const value = translations[lang]?.[element.dataset.i18n]
     if (value) element.textContent = value
   })
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    const value = translations[lang]?.[element.dataset.i18nHtml]
+    if (value) element.innerHTML = value
+  })
   document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
     const value = translations[lang]?.[element.dataset.i18nAlt]
     if (value) element.setAttribute("alt", value)
@@ -303,5 +328,33 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: 0.12 },
   )
   reveals.forEach((element) => observer.observe(element))
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  const countObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return
+        const el = entry.target
+        countObserver.unobserve(el)
+        const target = Number(el.dataset.count)
+        const suffix = el.dataset.suffix || ""
+        if (reduceMotion) {
+          el.textContent = target + suffix
+          return
+        }
+        const start = performance.now()
+        const duration = 1400
+        const tick = (now) => {
+          const progress = Math.min((now - start) / duration, 1)
+          const eased = 1 - Math.pow(1 - progress, 3)
+          el.textContent = Math.round(target * eased) + suffix
+          if (progress < 1) requestAnimationFrame(tick)
+        }
+        requestAnimationFrame(tick)
+      })
+    },
+    { threshold: 0.6 },
+  )
+  document.querySelectorAll("[data-count]").forEach((el) => countObserver.observe(el))
 })
 
