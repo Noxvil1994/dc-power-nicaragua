@@ -345,3 +345,10 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
   .gallery-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-rows: 280px; grid-template-areas: none; gap: 14px; }
   .g-roof, .g-res, .g-resp, .g-com, .g-cua { grid-area: auto; }
 }
+
+/* Ilustración "Cómo funciona" en Nosotros */
+.about-illustration { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; fill: #000; stroke: none; stroke-width: 0; }
+.about-illustration .diag-flow[stroke-dasharray] { animation: diag-flow 1.4s linear infinite; }
+.about-illustration .diag-ray { animation: diag-flow 2.2s linear infinite; }
+@keyframes diag-flow { to { stroke-dashoffset: -52; } }
+@media (prefers-reduced-motion: reduce) { .about-illustration .diag-flow, .about-illustration .diag-ray { animation: none; } }

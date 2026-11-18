@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261117b" />
-    <script type="module" src="main.js?v=20261117b"></script>
+    <link rel="stylesheet" href="styles.css?v=20261117c" />
+    <script type="module" src="main.js?v=20261117c"></script>
   </head>
   <body>
     <header class="site-header">
@@ -38,9 +38,71 @@
         <div class="container about-grid">
           <div class="reveal">
             <span class="section-kicker">DC Power Nicaragua</span><h2 data-i18n="about_heading">Independencia energética, acompañada de principio a fin.</h2>
-            <figure class="about-figure">
-              <img src="assets/img/comercial-inversores-800.webp" srcset="assets/img/comercial-inversores-800.webp 800w, assets/img/comercial-inversores-1400.webp 1400w" sizes="(max-width: 960px) 92vw, 460px" width="800" height="600" loading="lazy" decoding="async" alt="Tres inversores comerciales montados en pared con canalización metálica" data-i18n-alt="alt_comercial" />
-              <figcaption data-i18n="about_photo_caption">Cada instalación se entrega ordenada, protegida y lista para crecer.</figcaption>
+            <figure class="about-figure about-figure-diagram">
+              <svg class="about-illustration" viewBox="0 0 800 600" role="img" aria-labelledby="diag-title">
+                <title id="diag-title" data-i18n="diag_title">Cómo funciona un sistema solar: el sol llega a los paneles, el inversor convierte la energía, las baterías la guardan y tu hogar la usa.</title>
+                <defs>
+                  <linearGradient id="diag-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf4ff"/><stop offset="1" stop-color="#f5f9fc"/></linearGradient>
+                  <linearGradient id="diag-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#087fe8"/><stop offset="1" stop-color="#073b91"/></linearGradient>
+                </defs>
+                <rect width="800" height="600" fill="url(#diag-sky)"/>
+                <circle cx="610" cy="90" r="120" fill="#087fe8" opacity=".05"/>
+                <circle cx="120" cy="520" r="160" fill="#55d915" opacity=".07"/>
+                <!-- Sol -->
+                <g class="diag-sun">
+                  <circle cx="140" cy="120" r="78" fill="#ffd34d" opacity=".18"/>
+                  <circle cx="140" cy="120" r="46" fill="#ffc72c"/>
+                  <g stroke="#ffc72c" stroke-width="6" stroke-linecap="round">
+                    <path d="M140 46v-18M140 212v-18M66 120H48M232 120h-18M88 68 75 55M205 185l-13-13M88 172l-13 13M205 55l-13 13"/>
+                  </g>
+                </g>
+                <!-- Rayos hacia los paneles -->
+                <path class="diag-ray" d="M195 160 C 290 200 380 240 470 275" fill="none" stroke="#ffc72c" stroke-width="5" stroke-linecap="round" stroke-dasharray="2 16"/>
+                <!-- Suelo -->
+                <rect x="0" y="500" width="800" height="100" fill="#e7f8e2"/>
+                <path d="M0 500h800" stroke="#55d915" stroke-width="3" opacity=".5"/>
+                <!-- Casa -->
+                <rect x="455" y="318" width="250" height="182" rx="6" fill="#ffffff" stroke="#073b91" stroke-width="4"/>
+                <polygon points="425,330 580,205 735,330" fill="#073b91"/>
+                <g transform="translate(452 314) rotate(-38.9)">
+                  <rect x="18" y="10" width="140" height="34" rx="4" fill="url(#diag-panel)" stroke="#ffffff" stroke-width="3"/>
+                  <path d="M53 10v34M88 10v34M123 10v34M18 27h140" stroke="#ffffff" stroke-width="2" opacity=".7"/>
+                </g>
+                <rect x="545" y="410" width="60" height="90" rx="5" fill="#087fe8"/>
+                <circle cx="592" cy="458" r="4" fill="#ffffff"/>
+                <rect x="485" y="352" width="46" height="40" rx="4" fill="#e7f8e2" stroke="#073b91" stroke-width="3"/>
+                <rect x="630" y="352" width="46" height="40" rx="4" fill="#ffd34d" opacity=".9" stroke="#073b91" stroke-width="3"/>
+                <path d="M653 352v40M630 372h46M508 352v40M485 372h46" stroke="#073b91" stroke-width="2"/>
+                <!-- Flujo de energía -->
+                <path class="diag-flow" d="M468 300 C 420 270 320 268 300 322" fill="none" stroke="#55d915" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 12"/>
+                <path class="diag-flow" d="M345 380 H 453" fill="none" stroke="#55d915" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 12"/>
+                <path class="diag-flow" d="M300 438 V 450" fill="none" stroke="#55d915" stroke-width="6" stroke-linecap="round"/>
+                <!-- Inversor -->
+                <rect x="252" y="322" width="96" height="116" rx="12" fill="#ffffff" stroke="#073b91" stroke-width="4"/>
+                <rect x="254" y="380" width="92" height="56" rx="0" fill="#1f2a3d"/>
+                <path d="M254 380h92v44a12 12 0 0 1-12 12h-68a12 12 0 0 1-12-12z" fill="#1f2a3d"/>
+                <rect x="280" y="340" width="40" height="26" rx="4" fill="#082762"/>
+                <path d="M287 357l7-7 6 5 8-8" stroke="#55d915" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Baterías -->
+                <rect x="252" y="450" width="96" height="50" rx="8" fill="#ffffff" stroke="#073b91" stroke-width="4"/>
+                <rect x="266" y="464" width="16" height="22" rx="3" fill="#55d915"/>
+                <rect x="288" y="464" width="16" height="22" rx="3" fill="#55d915"/>
+                <rect x="310" y="464" width="16" height="22" rx="3" fill="#55d915" opacity=".35"/>
+                <!-- Etiquetas -->
+                <g font-family="Manrope, sans-serif" font-weight="800" font-size="25" text-anchor="middle">
+                  <rect x="78" y="216" width="124" height="46" rx="23" fill="#ffffff" stroke="#d6e2f0" stroke-width="2"/>
+                  <text x="140" y="247" fill="#073b91" data-i18n="diag_sun">Sol</text>
+                  <rect x="462" y="136" width="156" height="46" rx="23" fill="#ffffff" stroke="#d6e2f0" stroke-width="2"/>
+                  <text x="540" y="167" fill="#073b91" data-i18n="diag_panels">Paneles</text>
+                  <rect x="56" y="357" width="170" height="46" rx="23" fill="#073b91"/>
+                  <text x="141" y="388" fill="#ffffff" data-i18n="diag_inverter">Inversor</text>
+                  <rect x="56" y="452" width="170" height="46" rx="23" fill="#55d915"/>
+                  <text x="141" y="483" fill="#073b91" data-i18n="diag_battery">Baterías</text>
+                  <rect x="495" y="522" width="170" height="46" rx="23" fill="#ffffff" stroke="#d6e2f0" stroke-width="2"/>
+                  <text x="580" y="553" fill="#073b91" data-i18n="diag_home">Tu hogar</text>
+                </g>
+              </svg>
+              <figcaption data-i18n="about_diagram_caption">El sol llega a tus paneles, el inversor convierte la energía y las baterías la guardan para cuando la necesites.</figcaption>
             </figure>
           </div>
           <div class="rich-copy reveal">

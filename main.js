@@ -106,6 +106,15 @@ const translations = {
     alt_respaldo: "Rack con tres baterías de litio conectadas a un inversor",
     alt_cuarto:
       "Cuarto eléctrico con tablero, interruptor general e inversores instalados en pared",
+    about_diagram_caption:
+      "El sol llega a tus paneles, el inversor convierte la energía y las baterías la guardan para cuando la necesites.",
+    diag_title:
+      "Cómo funciona un sistema solar: el sol llega a los paneles, el inversor convierte la energía, las baterías la guardan y tu hogar la usa.",
+    diag_sun: "Sol",
+    diag_panels: "Paneles",
+    diag_inverter: "Inversor",
+    diag_battery: "Baterías",
+    diag_home: "Tu hogar",
     about_photo_caption:
       "Cada instalación se entrega ordenada, protegida y lista para crecer.",
         social_title: "Nuestras redes",
@@ -220,6 +229,15 @@ const translations = {
     alt_respaldo: "Rack of three lithium batteries connected to an inverter",
     alt_cuarto:
       "Electrical room with panelboard, main disconnect, and wall-mounted inverters",
+    about_diagram_caption:
+      "Sunlight reaches your panels, the inverter converts the energy, and the batteries store it for when you need it.",
+    diag_title:
+      "How a solar system works: sunlight reaches the panels, the inverter converts the energy, the batteries store it, and your home uses it.",
+    diag_sun: "Sun",
+    diag_panels: "Panels",
+    diag_inverter: "Inverter",
+    diag_battery: "Batteries",
+    diag_home: "Your home",
     about_photo_caption:
       "Every installation is delivered organized, protected, and ready to grow.",
         social_title: "Our social media",
