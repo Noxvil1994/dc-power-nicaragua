@@ -286,7 +286,36 @@ function changeLanguage(lang) {
   } catch {}
 }
 
+function setupNavIndicator() {
+  const nav = document.querySelector(".desktop-nav")
+  if (!nav) return () => {}
+  const indicator = document.createElement("span")
+  indicator.className = "nav-indicator"
+  indicator.setAttribute("aria-hidden", "true")
+  nav.appendChild(indicator)
+  const active = nav.querySelector("a.active")
+  const move = (link) => {
+    if (!link || !link.offsetWidth) {
+      indicator.style.opacity = "0"
+      return
+    }
+    indicator.style.opacity = "1"
+    indicator.style.width = link.offsetWidth + "px"
+    indicator.style.transform = `translateX(${link.offsetLeft}px)`
+  }
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("mouseenter", () => move(link))
+    link.addEventListener("focus", () => move(link))
+  })
+  nav.addEventListener("mouseleave", () => move(active))
+  window.addEventListener("resize", () => move(active))
+  document.fonts?.ready.then(() => move(active))
+  move(active)
+  return () => move(active)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  const refreshIndicator = setupNavIndicator()
   const langSwitch = document.getElementById("lang-switch")
   let savedLang = "es"
   try {
@@ -295,9 +324,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (langSwitch) {
     langSwitch.value = savedLang
     changeLanguage(savedLang)
-    langSwitch.addEventListener("change", (event) =>
-      changeLanguage(event.target.value),
-    )
+    langSwitch.addEventListener("change", (event) => {
+      changeLanguage(event.target.value)
+      refreshIndicator()
+    })
   }
 
   const toggle = document.querySelector(".menu-toggle")
