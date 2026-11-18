@@ -46,16 +46,16 @@ const translations = {
     cta_kicker: "El futuro empieza hoy",
     cta_title: "¿Listo para producir tu propia energía?",
     cta_title_html: "¿Listo para producir<br />tu propia energía?",
-    mv_kicker: "Hacia dónde vamos",
+    mv_kicker: "Lo que nos mueve",
     mv_title: "Nuestra misión y visión.",
     mv_intro:
-      "Lo que hacemos cada día y el futuro que queremos construir para Nicaragua.",
+      "Detrás de cada sistema hay una familia, un negocio y un sueño. Para eso trabajamos.",
     mission_title: "Misión",
     mission_text:
-      "Llevar energía solar confiable a hogares y empresas de Nicaragua, con sistemas bien diseñados, instalación profesional y un acompañamiento cercano que haga la transición simple y rentable.",
+      "Acompañar a cada familia y negocio nicaragüense a producir su propia energía: escuchando lo que necesitan, explicando con palabras sencillas y estando presentes antes, durante y después de cada instalación.",
     vision_title: "Visión",
     vision_text:
-      "Ser la empresa de referencia en energía solar y almacenamiento en Nicaragua, reconocida por la calidad de su trabajo y por ayudar a más familias y negocios a alcanzar su independencia energética.",
+      "Ser la empresa de energía en la que la gente de Nicaragua confía como en un vecino: cercana, honesta y comprometida con que cada hogar y negocio tenga la energía que necesita para seguir adelante.",
     cta_text:
       "Cuéntanos sobre tu proyecto. La primera orientación es sin compromiso.",
     cta_button: "Hablar por WhatsApp",
@@ -181,15 +181,15 @@ const translations = {
     cta_kicker: "The future starts today",
     cta_title: "Ready to produce your own energy?",
     cta_title_html: "Ready to produce<br />your own energy?",
-    mv_kicker: "Where we're headed",
+    mv_kicker: "What drives us",
     mv_title: "Our mission and vision.",
-    mv_intro: "What we do every day and the future we want to build for Nicaragua.",
+    mv_intro: "Behind every system there's a family, a business, and a dream. That's what we work for.",
     mission_title: "Mission",
     mission_text:
-      "To bring reliable solar energy to homes and businesses across Nicaragua, with well-designed systems, professional installation, and close support that makes the transition simple and profitable.",
+      "To walk alongside every Nicaraguan family and business as they produce their own energy: listening to what they need, explaining things in plain words, and staying close before, during, and after every installation.",
     vision_title: "Vision",
     vision_text:
-      "To be Nicaragua's reference company in solar energy and storage, recognized for the quality of our work and for helping more families and businesses achieve energy independence.",
+      "To be the energy company people in Nicaragua trust like a neighbor: close, honest, and committed to making sure every home and business has the energy it needs to keep moving forward.",
     cta_text: "Tell us about your project. Your first consultation is free.",
     cta_button: "Chat on WhatsApp",
     footer_tagline: "Clean, reliable energy designed to move forward.",
