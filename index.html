@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261118a" />
-    <script type="module" src="main.js?v=20261118a"></script>
+    <link rel="stylesheet" href="styles.css?v=20261118b" />
+    <script type="module" src="main.js?v=20261118b"></script>
   </head>
   <body>
     <header class="site-header">
@@ -69,7 +69,113 @@
             </div>
           </div>
           <div class="hero-visual reveal">
-            <div class="hero-photo" role="img" aria-label="Paneles solares instalados en un techo con paisaje verde"></div>
+            <div class="hero-photo hero-photo-art" role="img" aria-label="Ilustración de paneles solares recibiendo la energía del sol y cargando una batería">
+              <svg class="hero-art" viewBox="0 0 540 680" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+                <defs>
+                  <linearGradient id="ha-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0b2f7c"/><stop offset=".55" stop-color="#082762"/><stop offset="1" stop-color="#051538"/></linearGradient>
+                  <radialGradient id="ha-sunglow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(382 128) scale(230)"><stop offset="0" stop-color="#55d915" stop-opacity=".45"/><stop offset=".35" stop-color="#087fe8" stop-opacity=".28"/><stop offset="1" stop-color="#087fe8" stop-opacity="0"/></radialGradient>
+                  <radialGradient id="ha-sun" cx=".4" cy=".35" r=".7"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#d9ffc2"/><stop offset=".75" stop-color="#55d915"/><stop offset="1" stop-color="#2fa80a"/></radialGradient>
+                  <linearGradient id="ha-panel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a6fe0"/><stop offset=".5" stop-color="#123f9e"/><stop offset="1" stop-color="#0a2466"/></linearGradient>
+                  <pattern id="ha-cells" width="15" height="14" patternUnits="userSpaceOnUse"><path d="M15 0V14M0 14H15" stroke="#9cc8ff" stroke-opacity=".38" stroke-width=".8" fill="none"/></pattern>
+                  <linearGradient id="ha-sweep" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".5" stop-color="#ffffff" stop-opacity=".55"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+                  <linearGradient id="ha-ray" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#55d915" stop-opacity=".9"/><stop offset="1" stop-color="#087fe8" stop-opacity=".2"/></linearGradient>
+                  <clipPath id="ha-clip"><rect x="0" y="0" width="90" height="56" rx="3"/>
+<rect x="98" y="0" width="90" height="56" rx="3"/>
+<rect x="196" y="0" width="90" height="56" rx="3"/>
+<rect x="0" y="64" width="90" height="56" rx="3"/>
+<rect x="98" y="64" width="90" height="56" rx="3"/>
+<rect x="196" y="64" width="90" height="56" rx="3"/>
+<rect x="0" y="128" width="90" height="56" rx="3"/>
+<rect x="98" y="128" width="90" height="56" rx="3"/>
+<rect x="196" y="128" width="90" height="56" rx="3"/>
+<rect x="0" y="192" width="90" height="56" rx="3"/>
+<rect x="98" y="192" width="90" height="56" rx="3"/>
+<rect x="196" y="192" width="90" height="56" rx="3"/></clipPath>
+                  <filter id="ha-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+                  <filter id="ha-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                </defs>
+                <rect width="540" height="680" fill="url(#ha-bg)"/>
+                <circle cx="382" cy="128" r="230" fill="url(#ha-sunglow)"/>
+                <!-- piso de cuadrícula -->
+                <g transform="matrix(0.866 0.5 -0.866 0.5 253 300)" stroke="#4da3ff" stroke-opacity=".16" stroke-width="1" fill="none"><path d="M-80 -80V330"/><path d="M-40 -80V330"/><path d="M0 -80V330"/><path d="M40 -80V330"/><path d="M80 -80V330"/><path d="M120 -80V330"/><path d="M160 -80V330"/><path d="M200 -80V330"/><path d="M240 -80V330"/><path d="M280 -80V330"/><path d="M320 -80V330"/><path d="M360 -80V330"/><path d="M-80 -80H380"/><path d="M-80 -40H380"/><path d="M-80 0H380"/><path d="M-80 40H380"/><path d="M-80 80H380"/><path d="M-80 120H380"/><path d="M-80 160H380"/><path d="M-80 200H380"/><path d="M-80 240H380"/><path d="M-80 280H380"/><path d="M-80 320H380"/></g>
+                <ellipse cx="270" cy="440" rx="230" ry="90" fill="#087fe8" opacity=".35" filter="url(#ha-blur)"/>
+                <!-- sol -->
+                <g class="ha-sun">
+                  <circle cx="382" cy="128" r="74" fill="none" stroke="#55d915" stroke-opacity=".35" stroke-width="1.2"/>
+                  <circle class="ha-ring" cx="382" cy="128" r="96" fill="none" stroke="#87e86a" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="3 10"/>
+                  <circle cx="382" cy="128" r="122" fill="none" stroke="#087fe8" stroke-opacity=".3" stroke-width="1"/>
+                  <circle class="ha-core" cx="382" cy="128" r="44" fill="url(#ha-sun)" filter="url(#ha-glow)"/>
+                </g>
+                <!-- rayos -->
+                <g class="ha-rays" stroke="url(#ha-ray)" stroke-width="2.2" stroke-linecap="round" fill="none" stroke-dasharray="2 12">
+                  <path d="M350 162 L262 312"/><path d="M372 172 L360 360"/><path d="M398 170 L452 420"/>
+                </g>
+                <!-- grosor del arreglo -->
+                <g transform="translate(0 8)"><g transform="matrix(0.866 0.5 -0.866 0.5 253 300)"><rect x="0" y="0" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="98" y="0" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="196" y="0" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="0" y="64" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="98" y="64" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="196" y="64" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="0" y="128" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="98" y="128" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="196" y="128" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="0" y="192" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="98" y="192" width="90" height="56" rx="3" fill="#030d26"/>
+<rect x="196" y="192" width="90" height="56" rx="3" fill="#030d26"/></g></g>
+                <g transform="translate(0 4)"><g transform="matrix(0.866 0.5 -0.866 0.5 253 300)"><rect x="0" y="0" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="98" y="0" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="196" y="0" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="0" y="64" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="98" y="64" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="196" y="64" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="0" y="128" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="98" y="128" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="196" y="128" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="0" y="192" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="98" y="192" width="90" height="56" rx="3" fill="#0a1f52"/>
+<rect x="196" y="192" width="90" height="56" rx="3" fill="#0a1f52"/></g></g>
+                <!-- paneles -->
+                <g transform="matrix(0.866 0.5 -0.866 0.5 253 300)">
+                  <rect x="0" y="0" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="98" y="0" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="196" y="0" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="0" y="64" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="98" y="64" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="196" y="64" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="0" y="128" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="98" y="128" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="196" y="128" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="0" y="192" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="98" y="192" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+<rect x="196" y="192" width="90" height="56" rx="3" fill="url(#ha-panel)" stroke="#7fb6ff" stroke-opacity=".55" stroke-width="1.2"/>
+                  <rect x="0" y="0" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="98" y="0" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="196" y="0" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="0" y="64" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="98" y="64" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="196" y="64" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="0" y="128" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="98" y="128" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="196" y="128" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="0" y="192" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="98" y="192" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+<rect x="196" y="192" width="90" height="56" rx="3" fill="url(#ha-cells)"/>
+                  <g clip-path="url(#ha-clip)"><rect class="ha-sweep" x="-140" y="-40" width="110" height="340" fill="url(#ha-sweep)"/></g>
+                </g>
+                <!-- flujo hacia la batería -->
+                <path class="ha-flow" d="M286 578 C 290 610 330 606 352 618" fill="none" stroke="#55d915" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="10 9" filter="url(#ha-glow)"/>
+                <g transform="translate(352 600)" filter="url(#ha-glow)">
+                  <rect width="92" height="38" rx="10" fill="#061a45" stroke="#55d915" stroke-width="2"/>
+                  <rect x="92" y="13" width="6" height="12" rx="2" fill="#55d915"/>
+                  <rect class="ha-bar" x="10" y="9" width="16" height="20" rx="3" fill="#55d915"/>
+                  <rect class="ha-bar" x="30" y="9" width="16" height="20" rx="3" fill="#55d915" style="animation-delay:.4s"/>
+                  <rect class="ha-bar" x="50" y="9" width="16" height="20" rx="3" fill="#55d915" style="animation-delay:.8s"/>
+                  <rect class="ha-bar" x="70" y="9" width="12" height="20" rx="3" fill="#55d915" style="animation-delay:1.2s"/>
+                </g>
+                <g class="ha-sparks"><circle class="sp" cx="185" cy="184" r="1.8" fill="#087fe8" style="animation-delay:-0.19s"/><circle class="sp" cx="440" cy="578" r="1.4" fill="#ffffff" style="animation-delay:-2.33s"/><circle class="sp" cx="485" cy="549" r="1.4" fill="#55d915" style="animation-delay:-0.34s"/><circle class="sp" cx="234" cy="101" r="1.4" fill="#55d915" style="animation-delay:-2.20s"/><circle class="sp" cx="50" cy="609" r="1.4" fill="#55d915" style="animation-delay:-2.52s"/><circle class="sp" cx="318" cy="93" r="2.4" fill="#087fe8" style="animation-delay:-1.59s"/><circle class="sp" cx="519" cy="256" r="1.4" fill="#087fe8" style="animation-delay:-3.43s"/><circle class="sp" cx="168" cy="459" r="1.4" fill="#087fe8" style="animation-delay:-0.47s"/><circle class="sp" cx="177" cy="603" r="2.4" fill="#55d915" style="animation-delay:-0.41s"/><circle class="sp" cx="312" cy="222" r="1.8" fill="#55d915" style="animation-delay:-2.19s"/><circle class="sp" cx="52" cy="607" r="1.4" fill="#087fe8" style="animation-delay:-0.82s"/><circle class="sp" cx="368" cy="574" r="1.8" fill="#ffffff" style="animation-delay:-1.86s"/><circle class="sp" cx="492" cy="494" r="1.8" fill="#ffffff" style="animation-delay:-0.99s"/><circle class="sp" cx="112" cy="279" r="1.4" fill="#087fe8" style="animation-delay:-1.20s"/><circle class="sp" cx="273" cy="381" r="2.4" fill="#ffffff" style="animation-delay:-1.15s"/><circle class="sp" cx="57" cy="150" r="2.4" fill="#ffffff" style="animation-delay:-0.66s"/><circle class="sp" cx="195" cy="185" r="1.8" fill="#ffffff" style="animation-delay:-0.16s"/><circle class="sp" cx="362" cy="109" r="2.4" fill="#087fe8" style="animation-delay:-3.16s"/></g>
+              </svg>
+            </div>
             <div class="floating-card savings-card">
               <span class="metric-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3"/></svg></span>
               <div><small data-i18n="saving_label">Ahorro potencial</small><strong>30–100%</strong><span data-i18n="saving_detail">en tu factura eléctrica</span></div>
