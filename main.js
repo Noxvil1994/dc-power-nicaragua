@@ -95,6 +95,19 @@ const translations = {
       "Del techo al tablero: cada sistema se instala con orden, seguridad y criterio técnico.",
     work_cap_1: "Sistema fotovoltaico en techo",
     work_cap_2: "Inversor, protecciones y almacenamiento",
+    gallery_1: "Sistema residencial híbrido con baterías",
+    gallery_2: "Banco de inversores para uso comercial",
+    gallery_3: "Respaldo con baterías de litio",
+    gallery_4: "Cuarto eléctrico con canalización ordenada",
+    alt_residencial:
+      "Inversor híbrido residencial instalado en pared con banco de baterías debajo",
+    alt_comercial:
+      "Tres inversores comerciales montados en pared con canalización metálica",
+    alt_respaldo: "Rack con tres baterías de litio conectadas a un inversor",
+    alt_cuarto:
+      "Cuarto eléctrico con tablero, interruptor general e inversores instalados en pared",
+    about_photo_caption:
+      "Cada instalación se entrega ordenada, protegida y lista para crecer.",
         social_title: "Nuestras redes",
     social_text:
       "Síguenos para conocer nuestros proyectos y novedades de energía solar.",
@@ -196,6 +209,19 @@ const translations = {
       "From the roof to the panel: every system is installed with order, safety, and technical care.",
     work_cap_1: "Rooftop photovoltaic system",
     work_cap_2: "Inverter, protections, and storage",
+    gallery_1: "Hybrid residential system with batteries",
+    gallery_2: "Commercial inverter bank",
+    gallery_3: "Lithium battery backup",
+    gallery_4: "Electrical room with organized conduit",
+    alt_residencial:
+      "Wall-mounted residential hybrid inverter with a battery bank below",
+    alt_comercial:
+      "Three commercial inverters mounted on a wall with metal conduit",
+    alt_respaldo: "Rack of three lithium batteries connected to an inverter",
+    alt_cuarto:
+      "Electrical room with panelboard, main disconnect, and wall-mounted inverters",
+    about_photo_caption:
+      "Every installation is delivered organized, protected, and ready to grow.",
         social_title: "Our social media",
     social_text:
       "Follow us to see our projects and solar energy news.",
@@ -208,12 +234,21 @@ function changeLanguage(lang) {
     const value = translations[lang]?.[element.dataset.i18n]
     if (value) element.textContent = value
   })
-  localStorage.setItem("preferred_lang", lang)
+  document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+    const value = translations[lang]?.[element.dataset.i18nAlt]
+    if (value) element.setAttribute("alt", value)
+  })
+  try {
+    localStorage.setItem("preferred_lang", lang)
+  } catch {}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const langSwitch = document.getElementById("lang-switch")
-  const savedLang = localStorage.getItem("preferred_lang") || "es"
+  let savedLang = "es"
+  try {
+    savedLang = localStorage.getItem("preferred_lang") || "es"
+  } catch {}
   if (langSwitch) {
     langSwitch.value = savedLang
     changeLanguage(savedLang)
