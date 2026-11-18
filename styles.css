@@ -616,3 +616,14 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
 .hero-art .sp { animation: ha-twinkle 4s ease-in-out infinite; }
 @keyframes ha-twinkle { 0%, 100% { opacity: .15; } 50% { opacity: .9; } }
 @media (prefers-reduced-motion: reduce) { .hero-art * { animation: none !important; } }
+
+/* Menos azul en la portada: fondo más profundo y la ilustración como pantalla oscura */
+.hero {
+  background:
+    radial-gradient(45% 55% at 80% 40%, rgba(85,217,21,.14), transparent 70%),
+    radial-gradient(50% 60% at 95% 0%, rgba(8,127,232,.22), transparent 70%),
+    linear-gradient(160deg, #030b20 0%, var(--night) 55%, var(--ink) 100%);
+}
+.hero-photo.hero-photo-art { background: #040c22; box-shadow: 0 0 0 1px rgba(85,217,21,.28), 0 30px 80px rgba(0,0,0,.5), 0 0 90px rgba(85,217,21,.16); }
+.hero-visual::before { border-color: rgba(85,217,21,.3); }
+.hero .floating-card { background: rgba(4,12,34,.72); }
