@@ -544,3 +544,21 @@ h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.045em; }
   .footer-brand img { width: 76px; }
 }
 .footer-main a { overflow-wrap: anywhere; }
+
+/* Pie de página oscuro y futurista */
+.site-footer { position: relative; isolation: isolate; overflow: hidden; color: var(--white);
+  background:
+    radial-gradient(45% 80% at 90% 0%, rgba(8,127,232,.28), transparent 70%),
+    radial-gradient(35% 70% at 0% 100%, rgba(85,217,21,.12), transparent 70%),
+    linear-gradient(180deg, var(--ink) 0%, var(--night) 100%); }
+.site-footer::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,.10) 1px, transparent 1.5px); background-size: 26px 26px; -webkit-mask-image: linear-gradient(180deg, #000, transparent 85%); mask-image: linear-gradient(180deg, #000, transparent 85%); }
+.site-footer::after { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--lime), var(--forest-2), transparent); box-shadow: 0 0 18px rgba(85,217,21,.6); }
+.footer-brand img { mix-blend-mode: normal; filter: none; background: var(--white); padding: 4px; box-shadow: 0 0 0 1px rgba(85,217,21,.5), 0 0 30px rgba(85,217,21,.3), 0 0 60px rgba(8,127,232,.25); }
+.footer-brand p, .footer-social p { color: rgba(255,255,255,.62); }
+.footer-main h3 { color: var(--white); }
+.footer-main h3::after { box-shadow: 0 0 10px rgba(85,217,21,.7); }
+.footer-main a, .footer-main span { color: rgba(255,255,255,.66); }
+.footer-main a:hover { color: var(--lime); }
+.footer-main .social-links a { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.16); color: var(--white); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+.footer-main .social-links a:hover { background: var(--lime); border-color: var(--lime); color: var(--forest); box-shadow: 0 0 22px rgba(85,217,21,.5); }
+.footer-bottom { border-top-color: rgba(255,255,255,.1); color: rgba(255,255,255,.45); }
